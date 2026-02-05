@@ -10,7 +10,6 @@
 * Domain Path: /languages
 * Requires at least: 6.0
 * Requires PHP: 8.0
-* Requires Plugins: configuration
 *
 * @package Boilerplate
 */

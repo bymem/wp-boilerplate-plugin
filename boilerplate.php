@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: WP Boilerplate
+* Plugin Name: WP Boilerplate V2
 * Plugin URI: https://simpledigital.dk
 * Description: A Boilerplate plugin
 * Version: 4.0.0
@@ -16,6 +16,7 @@
 defined('WPINC') or die("No direct access"); // Exit if accessed directly
 
 // Define constants
+define('BOILERPLATE_FILE', __FILE__);
 define('BOILERPLATE_DIR', plugin_dir_path(__FILE__));
 define('BOILERPLATE_URL', plugin_dir_url(__FILE__));
 

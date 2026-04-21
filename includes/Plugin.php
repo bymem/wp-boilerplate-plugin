@@ -22,6 +22,8 @@ use Boilerplate\Setup\Styles;
 use Boilerplate\Admin\Setup\Post_Types;
 use Boilerplate\Admin\Setup\Meta_Boxes;
 
+use Boilerplate\Admin\Helpers\UpdateClient;
+
 class Plugin {
 
     /**
@@ -169,6 +171,9 @@ class Plugin {
      */
     private function define_admin_hooks()
     {
+
+        // Register the update client with the support system
+        $this->loader->add_action('wp_loaded', new UpdateClient(), 'register_with_support', 20, 0);
 
         // Register Post Types, Admin Menu Change the priority if menu is not showing
         $Post_Types = new Post_Types($this->post_types, $this->menu_position);
